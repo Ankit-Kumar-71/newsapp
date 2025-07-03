@@ -12,7 +12,7 @@ const Newsapp = () => {
     );
     const jsonData = await response.json();
     //console.log(jsonData.articles);
-    const items = (jsonData.articles || []).slice(0, 30);
+    const items = (jsonData?.articles || []).slice(0, 30);
     // let dt = jsonData.articles.slice(0,30)
     setNewsData(items);
   };
@@ -33,7 +33,7 @@ const Newsapp = () => {
     );
     const jsonData = await response.json();
     //console.log(jsonData.articles);
-    const items = (jsonData.articles || []).slice(0, 30);
+    const items = (jsonData?.articles || []).slice(0, 30);
     // let dt = jsonData.articles.slice(0,30)
     setNewsData(items);
   };
