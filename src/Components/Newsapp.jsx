@@ -12,8 +12,9 @@ const Newsapp = () => {
     );
     const jsonData = await response.json();
     //console.log(jsonData.articles);
-    let dt = jsonData.articles.slice(0,30)
-    setNewsData(dt);
+    const items = (jsonData.articles || []).slice(0, 30);
+    // let dt = jsonData.articles.slice(0,30)
+    setNewsData(items);
   };
 
   useEffect(() => {
@@ -32,8 +33,9 @@ const Newsapp = () => {
     );
     const jsonData = await response.json();
     //console.log(jsonData.articles);
-    let dt = jsonData.articles.slice(0,30)
-    setNewsData(dt);
+    const items = (jsonData.articles || []).slice(0, 30);
+    // let dt = jsonData.articles.slice(0,30)
+    setNewsData(items);
   };
 
   return (
