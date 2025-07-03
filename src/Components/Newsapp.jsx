@@ -3,7 +3,7 @@ import Card from "./Card";
 
 const Newsapp = () => {
   const [search, setSearch] = useState("india");
-  const [newsData, setNewsData] = useState([]);
+  const [newsData, setNewsData] = useState(null);
   const API_KEY = "9c3ed8ee95884dec979460a60f96675b";
 
   const getData = async () => {
@@ -12,8 +12,8 @@ const Newsapp = () => {
     );
     const jsonData = await response.json();
     //console.log(jsonData.articles);
-    // let dt = jsonData.articles.slice(0,30)
-    setNewsData(jsonData.articles);
+    let dt = jsonData.articles.slice(0,30)
+    setNewsData(dt);
   };
 
   useEffect(() => {
@@ -32,8 +32,8 @@ const Newsapp = () => {
     );
     const jsonData = await response.json();
     //console.log(jsonData.articles);
-    // let dt = jsonData.articles.slice(0,10)
-    setNewsData(jsonData.articles);
+    let dt = jsonData.articles.slice(0,30)
+    setNewsData(dt);
   };
 
   return (
